@@ -1,0 +1,20 @@
+.visible {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+.item {
+    display: inline-block;
+}
+
+.list {
+    position: absolute;
+    list-style: none;
+}
+
+.container{
+    position: relative;
+}

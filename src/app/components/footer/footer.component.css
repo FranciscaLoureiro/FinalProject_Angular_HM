@@ -1,0 +1,14 @@
+.container {
+	font-size: 10px;
+    padding-top: 30px;
+	background-color: #ebebeb;
+	display: flex;
+    text-align: center;
+	line-height: 1.6;
+	padding-bottom: 30px;
+}
+
+.footer-icons {
+	display: flex;
+	justify-content: center;
+}

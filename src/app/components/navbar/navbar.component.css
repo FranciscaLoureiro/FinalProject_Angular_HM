@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.logoHM {
+    width: 100px;
+}
+
+.nav-icons {
+    display: flex;
+}

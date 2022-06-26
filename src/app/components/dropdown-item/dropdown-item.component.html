@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="item" (mouseover)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    {{ title }}
+  </div>
+  <div [ngClass]="{'hidden': !isOpened}">
+    <ul class="list" *ngFor="let item of dropdownList">
+      <li>
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</div>
