@@ -1,23 +1,23 @@
-
 <nav class="container">
-    <app-dropdown-item [title]= "'Homem'" [dropdownList]="menSubmenu"></app-dropdown-item>
-    <p>|</p>
-    <app-dropdown-item [title]= "'Mulher'" [dropdownList]="womenSubmenu"></app-dropdown-item>
-    <p><img src="{{ logoHM }}" alt="logoHM" class="logoHM"></p>
-    <app-dropdown-item [title]= "'Criança'" [dropdownList]="childrenSubmenu"></app-dropdown-item>
-    <p>|</p>
-    <app-dropdown-item [title]= "'Acessórios'" [dropdownList]="acessoriesSubmenu"></app-dropdown-item>
 
-    <div class="nav-icons">
-        <div class="nav-registo">
-            <fa-icon [icon]="faUserPlus"></fa-icon>
-            <!-- <span>Registo</span> -->
-        </div>
-        <div class="nav-login">
-            <fa-icon [icon]="faArrowRight"></fa-icon>
-            <!-- <span>Login</span> -->
-        </div>
+  <app-dropdown-item [title]="'Homem'" [dropdownList]="menSubmenu"></app-dropdown-item>
+  <div>|</div>
+  <app-dropdown-item [title]="'Mulher'" [dropdownList]="womenSubmenu"></app-dropdown-item>
+  <div>
+    <img src="{{ logoHM }}" alt="logoHM" class="logoHM">
+  </div>
+  <app-dropdown-item [title]="'Criança'" [dropdownList]="childrenSubmenu"></app-dropdown-item>
+  <div>|</div>
+  <app-dropdown-item [title]="'Acessórios'" [dropdownList]="acessoriesSubmenu"></app-dropdown-item>
+
+  <div class="nav-icons">
+    <div class="nav-registo">
+      <fa-icon [icon]="faUserPlus"></fa-icon>
+      <!-- <span>Registo</span> -->
     </div>
+    <div class="nav-login">
+      <fa-icon [icon]="faArrowRight"></fa-icon>
+      <!-- <span>Login</span> -->
+    </div>
+  </div>
 </nav>
-
-

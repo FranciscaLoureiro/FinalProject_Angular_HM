@@ -1,8 +1,12 @@
 img {
     display: flex;
-    width: 80%;
-    margin-left: 68px;
+    width: 100%;
 }
 
+.carousel-caption {
+    transform: translateY(-310px);
+}
 
-
+.carousel-caption h1 {
+    font-size: 100px;
+}

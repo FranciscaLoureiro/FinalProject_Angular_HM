@@ -1,0 +1,10 @@
+.highlights-container h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.highlights-list {
+    display: flex;
+    justify-content: space-between;
+}

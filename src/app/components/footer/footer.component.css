@@ -1,14 +1,19 @@
-.container {
+.footer-container {
 	font-size: 10px;
-    padding-top: 30px;
+    padding: 30px 40px;
 	background-color: #ebebeb;
 	display: flex;
     text-align: center;
+	flex-direction: column;
 	line-height: 1.6;
-	padding-bottom: 30px;
+	width: 100%;
+	margin: 0;
 }
 
 .footer-icons {
 	display: flex;
 	justify-content: center;
+	gap: 50px;
+	width: 100%;
+	margin-bottom: 20px;
 }

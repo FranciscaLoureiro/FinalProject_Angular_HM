@@ -1,0 +1,7 @@
+.root:hover {
+    border: 2px solid red;
+}
+
+.root {
+    border: 2px solid transparent;
+}

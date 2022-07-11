@@ -12,8 +12,10 @@ import { DropdownItemComponent } from './components/dropdown-item/dropdown-item.
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { HighligthsComponent } from './components/highligths/highligths.component';
+import { HighlightsComponent } from './components/highlights/highlights.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     DropdownItemComponent,
     FooterComponent,
     CarouselComponent,
-    HighligthsComponent
+    HighlightsComponent,
+    HighlightItemComponent,
   ],
   imports: [
     BrowserModule,

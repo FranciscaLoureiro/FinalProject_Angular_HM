@@ -1,7 +1,9 @@
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
+    position: relative;
 }
 
 .logoHM {
@@ -9,5 +11,8 @@
 }
 
 .nav-icons {
+    position: absolute;
     display: flex;
+    right: 0;
+    gap: 15px;
 }
