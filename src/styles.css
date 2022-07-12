@@ -3,3 +3,8 @@
     margin: 0;
     padding: 0;
 }
+
+.main-root {
+    max-width: 1400px;
+    margin: 0 auto;
+}

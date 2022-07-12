@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service'
 
 @Component({
   selector: 'app-highlights',
@@ -6,36 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./highlights.component.css']
 })
 export class HighlightsComponent implements OnInit {
-  products = [
-    {
-      name: 'Casaco',
-      description: 'Muito giro',
-      price: 22,
-      image: 'assets/contrast_panel_short_sleeve_shirt_1.jpg'
-    },
-    {
-      name: 'Jaqueta',
-      description: 'Muito giro',
-      price: 22,
-      image: 'assets/contrast_panel_short_sleeve_shirt_1.jpg'
-    },
-    {
-      name: 'Calças',
-      description: 'Muito giro',
-      price: 22,
-      image: 'assets/contrast_panel_short_sleeve_shirt_1.jpg'
-    },
-    {
-      name: 'Camisa',
-      description: 'Muito giro',
-      price: 22,
-      image: 'assets/contrast_panel_short_sleeve_shirt_1.jpg'
-    }
-  ]
-
-  constructor() { }
-
+  products: any[] = []
+  constructor(private productsService: ProductsService) { }
+ 
   ngOnInit(): void {
+    this.productsService.getHighlightedProducts().subscribe(products => (
+      this.products = products
+    ))
   }
-
 }

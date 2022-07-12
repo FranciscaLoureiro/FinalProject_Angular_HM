@@ -15,6 +15,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HighlightsComponent } from './components/highlights/highlights.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HighlightItemComponent } from './components/highlight-item/highlight-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductInfoComponent } from './components/product-info/product-info.component'
 
 
 
@@ -32,12 +34,14 @@ import { HighlightItemComponent } from './components/highlight-item/highlight-it
     CarouselComponent,
     HighlightsComponent,
     HighlightItemComponent,
+    ProductInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

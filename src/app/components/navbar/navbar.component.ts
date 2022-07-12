@@ -10,7 +10,6 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
   menSubmenu: string[] = menSubmenu
   womenSubmenu: string[] = womenSubmenu
   childrenSubmenu: string[] = childrenSubmenu

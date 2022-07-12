@@ -1,0 +1,29 @@
+.root {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.info-md {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+p {
+    padding: 10px 20%;
+    font-size: 18px;
+}

@@ -1,3 +1,5 @@
 <div class="root">
-    <img src="{{ product.image }}">
+    <a [routerLink]="['product/',product.id]">
+        <img src="assets/{{ product.mainImage }}">
+    </a>
 </div>
