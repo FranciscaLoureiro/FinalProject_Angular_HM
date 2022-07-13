@@ -10,13 +10,13 @@
   <app-dropdown-item [title]="'Acessórios'" [dropdownList]="acessoriesSubmenu"></app-dropdown-item>
 
   <div class="nav-icons">
-    <div class="nav-registo">
+    <div (click)="openRegisterModal()" class="nav-registo">
       <fa-icon [icon]="faUserPlus"></fa-icon>
-      <!-- <span>Registo</span> -->
     </div>
-    <div class="nav-login">
+    <div (click)="openLoginModal()" class="nav-login">
       <fa-icon [icon]="faArrowRight"></fa-icon>
-      <!-- <span>Login</span> -->
     </div>
   </div>
+  <app-login (onCloseModal)="closeLoginModal()" *ngIf="isLoginOpen"></app-login>
+  <app-register (onCloseModal)="closeRegisterModal()" *ngIf="isRegisterOpen"></app-register>
 </nav>

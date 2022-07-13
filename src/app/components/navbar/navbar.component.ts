@@ -15,12 +15,31 @@ export class NavbarComponent implements OnInit {
   childrenSubmenu: string[] = childrenSubmenu
   acessoriesSubmenu: string[] = acessoriesSubmenu
 
+  isLoginOpen: boolean = false
+  isRegisterOpen: boolean = false
+
   logoHM: string = "/assets/logo.png"
 
   
   faUserPlus = faUserPlus
   faArrowRight = faArrowRight
   constructor() {}
+
+  openLoginModal(){
+    this.isLoginOpen = true
+  }
+
+  openRegisterModal(){
+    this.isRegisterOpen = true
+  }
+
+  closeLoginModal(){
+    this.isLoginOpen = false
+  }
+
+  closeRegisterModal(){
+    this.isRegisterOpen = false
+  }
 
   ngOnInit(): void {
   }

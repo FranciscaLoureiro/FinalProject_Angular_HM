@@ -167,5 +167,16 @@
       "secondaryImage": "slim_fit_moleskin_trousers_2.jpg",
       "isHighlight": true
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Joao",
+      "email": "jon@gmail.com",
+      "address": "Viana do Castelo",
+      "zipCode": "4900-278",
+      "country": "Portugal",
+      "password": "password123"
+    }
   ]
 }
