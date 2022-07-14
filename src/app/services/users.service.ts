@@ -18,4 +18,8 @@ export class UsersService {
     const { email, password } = payload
     return this.http.get<any[]>(`${this.apiUrl}?email=${email}&password=${password}`)
   }
+
+  updateUser(userId: number, payload: any){
+    return this.http.put<any[]>(`${this.apiUrl}/${userId}`,payload)
+  }
 }

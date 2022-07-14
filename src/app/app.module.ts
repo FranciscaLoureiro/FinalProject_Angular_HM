@@ -19,7 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductInfoComponent } from './components/product-info/product-info.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
+import { ProfileModalComponent } from './components/profile-modal/profile-modal.component'
 
 
 
@@ -40,6 +43,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     ProductInfoComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
+    ProfileInfoComponent,
+    ProfileModalComponent,
   ],
   imports: [
     BrowserModule,

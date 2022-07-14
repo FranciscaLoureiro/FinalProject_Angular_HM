@@ -19,13 +19,15 @@
     </div>
     <!-- If user is logged -->
     <div *ngIf="isUserLogged">
-      Bem-vindo {{ username }}!
+      Bem-vindo(a) {{ username }}!
     </div>
     <div *ngIf="isUserLogged">
       <fa-icon [icon]="faClipboardList"></fa-icon>
     </div>
     <div *ngIf="isUserLogged">
-      <fa-icon [icon]="faUser"></fa-icon>
+      <a [routerLink]="['profile']">
+        <fa-icon [icon]="faUser"></fa-icon>
+      </a>
     </div>
     <div *ngIf="isUserLogged" (click)="logoutUser()">
       <fa-icon [icon]="faArrowLeft"></fa-icon>

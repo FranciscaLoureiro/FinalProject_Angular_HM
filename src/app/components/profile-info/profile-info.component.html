@@ -1,0 +1,27 @@
+<div class="root">
+    <div>
+        <fa-icon [icon]="faPenSquare" (click)="openProfileModal()"></fa-icon>
+    </div>
+    <div class="profile-group">
+        <span class="prop">Nome:</span>
+        <span>{{ profile.name }}</span>
+    </div>
+    <div class="profile-group">
+        <span class="prop">Email:</span>
+        <span>{{ profile.email }}</span>
+    </div>
+    <div class="profile-group">
+        <span class="prop">Morada:</span>
+        <span>{{ profile.address }}</span>
+    </div>
+    <div class="profile-group">
+        <span class="prop">Código Postal:</span>
+        <span>{{ profile.zipcode }}</span>
+    </div>
+    <div class="profile-group">
+        <span class="prop">País:</span>
+        <span>{{ profile.country }}</span>
+    </div>
+</div>
+<app-profile-modal *ngIf="isProfileOpen" (onCloseModal)="closeProfileModal()" [profile]="profile" 
+(onUpdateProfile)="updateProfile($event)"></app-profile-modal>

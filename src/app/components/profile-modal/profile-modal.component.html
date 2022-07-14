@@ -1,0 +1,29 @@
+<div class="form">
+    <span (click)="closeModal()" id="close-form">X</span>
+    <h1>Perfil</h1>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div>
+          <label>Nome</label>
+          <input formControlName="name" type="text" required>
+      </div>
+      <div>
+          <label>E-mail:</label>
+          <input formControlName="email" type="email" required>
+      </div>
+      <div>
+          <label>Morada:</label>
+          <input formControlName="address" type="text" required>
+      </div>
+      <div>
+          <label>Código Postal:</label>
+          <input formControlName="zipcode" type="text" required>
+      </div>
+      <div>
+          <label>País:</label>
+          <input formControlName="country" type="text" required>
+      </div>
+      <div>
+          <input type="submit" id="btSubmit" value="Guardar alteração de dados">
+      </div>
+    </form>
+  </div>

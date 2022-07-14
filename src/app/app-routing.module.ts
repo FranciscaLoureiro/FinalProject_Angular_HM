@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'product/:productId', component: ProductDetailsComponent },
   { path: 'wishlist', component: WishlistComponent },
   { path: 'admin', component: AdminComponent },
+  { path: 'profile', component: ProfileComponent }
 ];
 
 

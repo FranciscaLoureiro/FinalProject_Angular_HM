@@ -1,0 +1,18 @@
+.root {
+    border: 2px solid grey;
+    width: 60%;
+    margin: 60px auto;
+    min-width: 500px;
+    padding: 20px 40px 10px 40px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.profile-group {
+    margin-bottom: 10px;
+}
+
+.prop {
+    font-weight: bold;
+    margin-right: 10px;
+}

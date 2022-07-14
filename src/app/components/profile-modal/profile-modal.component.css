@@ -8,6 +8,7 @@
 	background-color: white;
 	padding: 40px;
 	transform: translateX(-50%);
+    border: 1px solid gray;
 }
 
 #close-form {
@@ -56,11 +57,4 @@
 	cursor: pointer;
 	margin-top: 10px;
 	margin-left: 270px;
-}
-
-.error {
-	font-size: 15px;
-	color: red;
-	margin-left: 20px;
-	margin-top: -10px;
 }
