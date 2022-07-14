@@ -1,18 +1,51 @@
 <div class="form">
-    <span (click)="closeModal()" id="close-form">X</span>
-    <h1>Registo</h1>
-    <form id="form-login" novalidate>
-        <section id="errors"></section>
-        <small id="email-error" class="error"></small>
-        <small id="senha-error" class="error"></small>
-        <small id="geral-error" class="error"></small>
-        <p><label for="nome">Nome</label><input type="text" id="pass" required maxlength="10"></p>
-        <p><label for="email">E-mail:</label><input type="email" id="email" required maxlength="40"></p>
-        <p><label for="senha">Senha:</label><input type="text" id="pass" required maxlength="10"></p>
-        <p><label for="address">Morada:</label><input type="text" id="pass" required maxlength="10"></p>
-        <p><label for="email">Código Postal:</label><input type="text" id="pass" required maxlength="10"></p>
-        <p><label for="email">País:</label><input type="text" id="pass" required maxlength="10"></p>
-        <p><input type="submit" id="btSubmit" value="Validar"></p>
-    </form>
+  <span (click)="closeModal()" id="close-form">X</span>
+  <h1>Registo</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Nome</label>
+        <input formControlName="name" type="text" required>
+        <div *ngIf="submitted && f['name'].errors" class="error">
+            Nome é um campo obrigatório
+        </div>
+    </div>
+    <div>
+        <label>E-mail:</label>
+        <input formControlName="email" type="email" required>
+        <div *ngIf="submitted && f['email'].errors" class="error">
+            Email é um campo obrigatório
+        </div>
+    </div>
+    <div>
+        <label>Senha:</label>
+        <input formControlName="password" type="password" required>
+        <div *ngIf="submitted && f['password'].errors" class="error">
+            Senha é um campo obrigatório
+        </div>
+    </div>
+    <div>
+        <label>Morada:</label>
+        <input formControlName="address" type="text" required>
+        <div *ngIf="submitted && f['address'].errors" class="error">
+            Morada é um campo obrigatório
+        </div>
+    </div>
+    <div>
+        <label>Código Postal:</label>
+        <input formControlName="zipcode" type="text" required>
+        <div *ngIf="submitted && f['zipcode'].errors" class="error">
+            Código Postal é um campo obrigatório
+        </div>
+    </div>
+    <div>
+        <label>País:</label>
+        <input formControlName="country" type="text" required>
+        <div *ngIf="submitted && f['country'].errors" class="error">
+            País é um campo obrigatório
+        </div>
+    </div>
+    <div>
+        <input type="submit" id="btSubmit" value="Validar">
+    </div>
+  </form>
 </div>
-

@@ -35,6 +35,7 @@
 }
 
 .form input[type='text'],
+.form input[type='password'],
 .form input[type='email'] {
 	margin-bottom: 10px;
 	width: 300px;
@@ -55,4 +56,11 @@
 	cursor: pointer;
 	margin-top: 10px;
 	margin-left: 270px;
+}
+
+.error {
+	font-size: 15px;
+	color: red;
+	margin-left: 20px;
+	margin-top: -10px;
 }

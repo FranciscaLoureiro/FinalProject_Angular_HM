@@ -10,13 +10,27 @@
   <app-dropdown-item [title]="'Acessórios'" [dropdownList]="acessoriesSubmenu"></app-dropdown-item>
 
   <div class="nav-icons">
-    <div (click)="openRegisterModal()" class="nav-registo">
+    <!-- If user isn't logged -->
+    <div *ngIf="!isUserLogged" (click)="openRegisterModal()" class="nav-registo">
       <fa-icon [icon]="faUserPlus"></fa-icon>
     </div>
-    <div (click)="openLoginModal()" class="nav-login">
+    <div *ngIf="!isUserLogged" (click)="openLoginModal()" class="nav-login">
       <fa-icon [icon]="faArrowRight"></fa-icon>
     </div>
+    <!-- If user is logged -->
+    <div *ngIf="isUserLogged">
+      Bem-vindo {{ username }}!
+    </div>
+    <div *ngIf="isUserLogged">
+      <fa-icon [icon]="faClipboardList"></fa-icon>
+    </div>
+    <div *ngIf="isUserLogged">
+      <fa-icon [icon]="faUser"></fa-icon>
+    </div>
+    <div *ngIf="isUserLogged" (click)="logoutUser()">
+      <fa-icon [icon]="faArrowLeft"></fa-icon>
+    </div>
   </div>
-  <app-login (onCloseModal)="closeLoginModal()" *ngIf="isLoginOpen"></app-login>
+  <app-login (onLogUser)="loginUser()" (onCloseModal)="closeLoginModal()" *ngIf="isLoginOpen"></app-login>
   <app-register (onCloseModal)="closeRegisterModal()" *ngIf="isRegisterOpen"></app-register>
 </nav>

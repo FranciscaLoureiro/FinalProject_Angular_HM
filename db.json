@@ -1,5 +1,6 @@
 {
-  "products": [{
+  "products": [
+    {
       "id": 1,
       "name": "Graphic print t-shirt",
       "brand": "Song For The Mute",
@@ -176,7 +177,8 @@
       "address": "Viana do Castelo",
       "zipCode": "4900-278",
       "country": "Portugal",
-      "password": "password123"
+      "password": "password123",
+      "wishlist": []
     }
   ]
 }

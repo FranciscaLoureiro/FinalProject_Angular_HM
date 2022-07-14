@@ -14,12 +14,8 @@ export class UsersService {
     return this.http.post<any>(this.apiUrl, payload)
   }
 
-  loginUser(email: string, password: string): Observable<any> {
+  loginUser(payload: any): Observable<any> {
+    const { email, password } = payload
     return this.http.get<any[]>(`${this.apiUrl}?email=${email}&password=${password}`)
-      .pipe(map(user => {
-        if(user){
-          localStorage.setItem('currentUser', JSON.stringify(user[0].id))
-        }
-      }))
   }
 }

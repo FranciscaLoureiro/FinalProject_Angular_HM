@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { menSubmenu, womenSubmenu, childrenSubmenu, acessoriesSubmenu } from 'src/app/data';
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
+import { 
+  faArrowRight, faUser, faUserPlus, faArrowLeft, faClipboardList
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -17,12 +17,19 @@ export class NavbarComponent implements OnInit {
 
   isLoginOpen: boolean = false
   isRegisterOpen: boolean = false
+  isUserLogged: boolean = false
+
+  username!: string
 
   logoHM: string = "/assets/logo.png"
 
   
   faUserPlus = faUserPlus
   faArrowRight = faArrowRight
+  faUser = faUser
+  faArrowLeft = faArrowLeft
+  faClipboardList = faClipboardList
+
   constructor() {}
 
   openLoginModal(){
@@ -41,7 +48,27 @@ export class NavbarComponent implements OnInit {
     this.isRegisterOpen = false
   }
 
+  loginUser(){
+    this.isUserLogged = true
+    this.setUser()
+  }
+
+  logoutUser() {
+    localStorage.removeItem('user')
+    this.isUserLogged = false
+  }
+
+  setUser() {
+    const user: any = localStorage.getItem('user')
+
+    if(user){
+      this.isUserLogged = true
+      this.username = JSON.parse(user).name
+    }
+  }
+
   ngOnInit(): void {
+    this.setUser()
   }
 
 }
