@@ -22,7 +22,9 @@
       Bem-vindo(a) {{ username }}!
     </div>
     <div *ngIf="isUserLogged">
-      <fa-icon [icon]="faClipboardList"></fa-icon>
+      <a [routerLink]="['wishlist']">
+        <fa-icon [icon]="faClipboardList"></fa-icon>
+      </a>
     </div>
     <div *ngIf="isUserLogged">
       <a [routerLink]="['profile']">

@@ -1,0 +1,7 @@
+<div class="root">
+    <img src="assets/{{product.mainImage}}">
+    <h1>{{ product.brand }}</h1>
+    <div>{{ product.name }}</div>
+    <div>{{ product.price }}€</div>
+    <button (click)="removeProductFromWishlist(product.id)">Remover</button>
+</div>

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductsListComponent } from './pages/products-list/products-list.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
 import { AdminComponent } from './pages/admin/admin.component';
@@ -22,7 +21,9 @@ import { RegisterComponent } from './components/register/register.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
-import { ProfileModalComponent } from './components/profile-modal/profile-modal.component'
+import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
+import { WishlistListComponent } from './components/wishlist-list/wishlist-list.component';
+import { ProductCardComponent } from './product-card/product-card.component'
 
 
 
@@ -30,7 +31,6 @@ import { ProfileModalComponent } from './components/profile-modal/profile-modal.
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductsListComponent,
     ProductDetailsComponent,
     WishlistComponent,
     AdminComponent,
@@ -46,6 +46,8 @@ import { ProfileModalComponent } from './components/profile-modal/profile-modal.
     ProfileComponent,
     ProfileInfoComponent,
     ProfileModalComponent,
+    WishlistListComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,

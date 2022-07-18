@@ -22,4 +22,9 @@ export class ProductsService {
   getProduct(productId: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${productId}`)
   }
+  // Get wishlist products
+  getWishlistProducts(products: any[]): Observable<any[]>{
+    const query = `?id=${products.join('&id=')}`
+    return this.http.get<any[]>(`${this.apiUrl}${query}`)
+  }
 }

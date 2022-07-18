@@ -171,12 +171,16 @@
   ],
   "users": [
     {
-      "name": "Joaod",
+      "name": "Joao",
       "email": "jon@gmail.com",
       "address": "Viana do Castelo",
       "zipcode": "4900-278",
       "country": "Portugal",
-      "id": 1
+      "id": 1,
+      "wishlist": [
+        8,
+        10
+      ]
     }
   ]
 }
