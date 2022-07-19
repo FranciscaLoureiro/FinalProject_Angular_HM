@@ -1,0 +1,54 @@
+<table>
+    <thead>
+        <tr>
+            <th>Foto</th>
+            <th>Marca</th>
+            <th>Produto</th>
+            <th>Tipo</th>
+            <th>Cor</th>
+            <th>Preço</th>
+            <th>Descrição</th>
+            <th>Destaque</th>
+            <th>Operações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>
+                <img src="assets/{{product.mainImage}}" />
+            </td>
+            <td>{{ product.brand }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.type }}</td>
+            <td>{{ product.color }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.description }}</td>
+            <td>
+                <input type="checkbox" [checked]="product.isHighlight" (change)="updateHighlightProduct(product)"  />
+            </td>
+            <td 
+                class="x"
+                (click)="openModal(product.id)"
+            >
+                x
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="modal1" *ngIf="isModalOpen">
+    Tem que a certeza que pretende eliminar o produto?
+    <div>
+        <button 
+            class="btn btn-primary"
+            (click)="deleteProduct()"
+        >
+            Sim
+        </button>
+        <button 
+            class="btn btn-danger"
+            (click)="closeModal()"
+        >
+            Não
+        </button>
+    </div>
+</div>

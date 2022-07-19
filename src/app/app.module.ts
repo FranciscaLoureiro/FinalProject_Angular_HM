@@ -23,7 +23,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
 import { ProfileModalComponent } from './components/profile-modal/profile-modal.component';
 import { WishlistListComponent } from './components/wishlist-list/wishlist-list.component';
-import { ProductCardComponent } from './product-card/product-card.component'
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ProductsTableComponent } from './components/products-table/products-table.component'
 
 
 
@@ -48,6 +50,8 @@ import { ProductCardComponent } from './product-card/product-card.component'
     ProfileModalComponent,
     WishlistListComponent,
     ProductCardComponent,
+    ProductFormComponent,
+    ProductsTableComponent,
   ],
   imports: [
     BrowserModule,

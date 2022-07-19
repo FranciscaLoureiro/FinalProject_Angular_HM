@@ -22,7 +22,7 @@
       "description": "Multi-colored cotton logo patch crewneck T-shirt from SONG FOR THE MUTE featuring logo patch to the front, short sleeves and straight hem.",
       "mainImage": "contrast_panel_short_sleeve_shirt_1.jpg",
       "secondaryImage": "contrast_panel_short_sleeve_shirt_2.jpg",
-      "isHighlight": false
+      "isHighlight": true
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "description": "For the modern gentleman. Crafted from a linen blend, this Moulin suit jacket from Jacquemus showcases the designer's ability to deliver sartorial designs with a contemporary twist. Suit up.",
       "mainImage": "moulin_suit_jacket_1.jpg",
       "secondaryImage": "moulin_suit_jacket_2.jpg",
-      "isHighlight": true
+      "isHighlight": false
     },
     {
       "id": 4,
@@ -167,6 +167,16 @@
       "mainImage": "slim_fit_moleskin_trousers_1.jpg",
       "secondaryImage": "slim_fit_moleskin_trousers_2.jpg",
       "isHighlight": true
+    },
+    {
+      "name": "f",
+      "brand": "f",
+      "type": "Camisa",
+      "color": "f",
+      "price": 120,
+      "description": "f",
+      "isHighlight": "",
+      "id": 15
     }
   ],
   "users": [

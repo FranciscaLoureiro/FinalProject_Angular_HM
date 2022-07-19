@@ -1,0 +1,42 @@
+table {
+ border: 1px solid whitesmoke;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+td,th {
+    padding: 20px;
+}
+
+img {
+    width: 60px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+.x {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal1 {
+    border: 1px solid black;
+    position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	top: 20%;
+	left: 50%;
+	z-index: 50;
+	background-color: white;
+	padding: 40px;
+	transform: translateX(-50%);
+}
+
+.btn {
+    margin: 15px 25px 0 0;
+}

@@ -1,0 +1,61 @@
+<div class="root">
+    <h1>Gestão de Produtos</h1>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Produto</label>
+            <input formControlName="name" type="text"/>
+            <div *ngIf="submitted && f['name'].errors" class="error">
+                Produto é um campo obrigatório
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Marca</label>
+            <input formControlName="brand" type="text"/>
+            <div *ngIf="submitted && f['brand'].errors" class="error">
+                Marca é um campo obrigatório
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Tipo</label>
+            <select formControlName="type">
+                <option value="" disabled selected>
+                    -- Selecionar um tipo de produto
+                </option>
+                <option value="Calças">Calças</option>
+                <option value="Camisa">Camisa</option>
+                <option value="Casaco">Casaco</option>
+                <option value="T-Shirt">T-Shirt</option>
+                <option value="Sweatshirt">Sweatshirt</option>
+            </select>
+            <div *ngIf="submitted && f['type'].errors" class="error">
+                Tipo é um campo obrigatório
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Cor</label>
+            <input formControlName="color" type="text"/>
+            <div *ngIf="submitted && f['color'].errors" class="error">
+                Cor é um campo obrigatório
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Preço</label>
+            <input formControlName="price" type="number"/>
+            <div *ngIf="submitted && f['price'].errors" class="error">
+                Marca é um campo obrigatório
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Descrição</label>
+            <textarea formControlName="description"></textarea>
+            <div *ngIf="submitted && f['description'].errors" class="error">
+                Descrição é um campo obrigatório
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Destaque</label>
+            <input formControlName="isHighlight" type="checkbox" />
+        </div>
+        <input type="submit" value="Inserir Produto" class="btn btn-primary" />
+    </form>
+</div>
