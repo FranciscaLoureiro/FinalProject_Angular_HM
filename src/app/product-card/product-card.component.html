@@ -1,7 +1,36 @@
-<div class="root">
-    <img src="assets/{{product.mainImage}}">
+<div 
+    class="root"
+    (mouseenter)="hover = true"
+    (mouseleave)="hover = false"
+>
+    <div class="star-container" *ngIf="!isWishlist">
+        <div 
+            *ngIf="isOnWishlist === false"
+            (click)="addProductToWishlist(product.id)"
+        >
+            <fa-icon 
+            class="fa-2x" 
+            [icon]="faStarEmpty"
+            ></fa-icon>
+        </div>
+        <div 
+            *ngIf="isOnWishlist === true"
+            (click)="removeProductFromWishlist(product.id)"
+        >
+            <fa-icon 
+            class="fa-2x red" 
+            [icon]="faStarFull"
+            ></fa-icon>
+        </div>
+    </div>
+    <img src="assets/{{hover ? product.secondaryImage : product.mainImage}}">
     <h1>{{ product.brand }}</h1>
     <div>{{ product.name }}</div>
     <div>{{ product.price }}€</div>
-    <button (click)="removeProductFromWishlist(product.id)">Remover</button>
+    <button 
+        (click)="removeProductFromWishlist(product.id)"
+        *ngIf="isWishlist"
+    >
+        Remover
+    </button>
 </div>

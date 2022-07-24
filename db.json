@@ -10,7 +10,7 @@
       "description": "We heard somewhere that we should enjoy the simple things in life. That's why we immediately knew this Song For The Mute white T-shirt would bring more fun to our days. Even if it means going back to the office.",
       "mainImage": "graphic_print_tshirt_1.jpg",
       "secondaryImage": "graphic_print_tshirt_2.jpg",
-      "isHighlight": true
+      "isHighlight": false
     },
     {
       "id": 2,
@@ -167,16 +167,6 @@
       "mainImage": "slim_fit_moleskin_trousers_1.jpg",
       "secondaryImage": "slim_fit_moleskin_trousers_2.jpg",
       "isHighlight": true
-    },
-    {
-      "name": "f",
-      "brand": "f",
-      "type": "Camisa",
-      "color": "f",
-      "price": 120,
-      "description": "f",
-      "isHighlight": "",
-      "id": 15
     }
   ],
   "users": [
@@ -188,8 +178,12 @@
       "country": "Portugal",
       "id": 1,
       "wishlist": [
-        8,
-        10
+        2,
+        3,
+        4,
+        6,
+        1,
+        1
       ]
     }
   ]

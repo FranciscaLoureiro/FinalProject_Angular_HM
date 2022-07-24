@@ -11,8 +11,21 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   // Get all products
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl)
+  getProducts(type: any = undefined, color: any = undefined): Observable<any[]> {
+    console.log(type)
+    let query = ''
+
+    if(type && color){
+      query = `?type=${type}&color=${color}`
+    }
+    if(type && !color){
+      query = `?type=${type}`
+    }
+    if(!type && color){
+      query = `?color=${color}`
+    }
+
+    return this.http.get<any[]>(`${this.apiUrl}${query}`)
   }
   // Get only highlight products
   getHighlightedProducts(): Observable<any[]> {

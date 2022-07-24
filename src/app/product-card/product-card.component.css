@@ -1,5 +1,7 @@
 .root {
     text-align: center;
+    position: relative;
+    padding: 0 20px;
 }
 
 .root h1 {
@@ -17,4 +19,14 @@
     border: none;
     padding: 10px 40px;
     margin-top: 10px;
+}
+
+.red {
+    color: red;
+}
+
+.star-container {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
 }

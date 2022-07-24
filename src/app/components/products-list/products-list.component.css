@@ -1,0 +1,50 @@
+.root {
+    display: flex;
+    margin: 60px 0;
+}
+
+.list-root {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    margin: 60px 0;
+    width: 80%;
+}
+
+.filter-wrapper{
+    padding-left: 40px;
+    text-align: center;
+    width: 20%;
+}
+
+.filter-form {
+    border: 1px solid black;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    gap: 10px;
+    padding: 2px 0 2px 15%;
+}
+
+form {
+    padding: 15px 0;
+}
+
+
+.head{
+    background-color: #DD6E0f;
+    color: white;
+    padding: 10px 0;
+}
+
+.more-button {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px 0;
+    margin-bottom: 60px;
+    cursor: pointer;
+}

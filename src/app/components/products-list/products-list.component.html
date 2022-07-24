@@ -1,0 +1,46 @@
+<div class="root">
+  <div class="filter-wrapper">
+    <div class="filter-form">
+      <div class="head">Tipo</div>
+      <form>
+        <div class="checkbox-wrapper" *ngFor="let type of types">
+          <input 
+            type="checkbox" 
+            value="{{type}}" 
+            name="{{type}}" 
+            [checked]="isTypeBoxChecked(type)"
+            (change)="onChangeType(type)"
+          >
+          <label>{{type}}</label>
+        </div>
+      </form>
+    </div>
+    <div class="filter-form">
+      <div class="head">Cor</div>
+      <form>
+        <div class="checkbox-wrapper" *ngFor="let color of colors">
+          <input 
+            type="checkbox" 
+            value="{{color}}" 
+            name="{{color}}" 
+            [checked]="isColorBoxChecked(color)"
+            (change)="onChangeColor(color)"
+          >
+          <label>{{color}}</label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="list-root">
+    <app-product-card *ngFor="let product of products.slice(0, limit)" [product]="product" [isWishlist]="false" [user]="user">
+    </app-product-card>
+
+  </div>
+</div>
+<div 
+  class="more-button" 
+  (click)="getMoreProducts()"
+  *ngIf="limit < products.length"
+>
+  Ver mais
+</div>
