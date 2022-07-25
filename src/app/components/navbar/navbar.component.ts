@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { menSubmenu, womenSubmenu, childrenSubmenu, acessoriesSubmenu } from 'src/app/data';
 import { 
-  faArrowRight, faUser, faUserPlus, faArrowLeft, faClipboardList
+  faArrowRight, faUser, faUserPlus, faArrowLeft, faClipboardList, faKey
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -29,6 +29,7 @@ export class NavbarComponent implements OnInit {
   faUser = faUser
   faArrowLeft = faArrowLeft
   faClipboardList = faClipboardList
+  faKey = faKey
 
   constructor() {}
 

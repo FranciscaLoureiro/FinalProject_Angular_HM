@@ -106,7 +106,7 @@
       "description": "Imperial-blue, cotton and polyamide-blend, classic hood, long sleeves, oversize frame, front zip fastening",
       "mainImage": "oversized_hooded_jacket_1.jpg",
       "secondaryImage": "oversized_hooded_jacket_2.jpg",
-      "isHighlight": false
+      "isHighlight": true
     },
     {
       "id": 10,
@@ -171,19 +171,17 @@
   ],
   "users": [
     {
-      "name": "Joao",
-      "email": "jon@gmail.com",
+      "name": "Francisca",
+      "email": "fran@gmail.com",
+      "password": "1234",
       "address": "Viana do Castelo",
-      "zipcode": "4900-278",
+      "zipcode": "4900-075",
       "country": "Portugal",
-      "id": 1,
+      "id": 3,
       "wishlist": [
-        2,
-        3,
-        4,
-        6,
         1,
-        1
+        6,
+        8
       ]
     }
   ]

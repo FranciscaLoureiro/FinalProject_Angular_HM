@@ -18,11 +18,24 @@
     list-style: none;
 }
 
+.list li {
+    cursor: pointer;
+}
+
+.list li:hover {
+    background-color: whitesmoke;
+}
+
 .list-wrapper {
     position: absolute;
     z-index: 1000;
-    top: 60px;
+    top: 25px;
     left: 0;
     background-color: white;
     width: 250px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

@@ -1,3 +1,7 @@
+<div class="search-bar">
+    <label>Pesquisa: </label>
+    <input type="text" (input)="onChangeInput($event.target)" />
+</div>
 <table>
     <thead>
         <tr>
@@ -13,7 +17,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products">
+        <tr *ngFor="let product of filteredProducts">
             <td>
                 <img src="assets/{{product.mainImage}}" />
             </td>

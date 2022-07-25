@@ -3,7 +3,9 @@
   <div>|</div>
   <app-dropdown-item [title]="'Mulher'" [dropdownList]="womenSubmenu"></app-dropdown-item>
   <div>
-    <img src="{{ logoHM }}" alt="logoHM" class="logoHM">
+    <a routerLink="/">
+      <img src="{{ logoHM }}" alt="logoHM" class="logoHM">
+    </a>
   </div>
   <app-dropdown-item [title]="'Criança'" [dropdownList]="childrenSubmenu"></app-dropdown-item>
   <div>|</div>
@@ -22,13 +24,18 @@
       Bem-vindo(a) {{ username }}!
     </div>
     <div *ngIf="isUserLogged">
-      <a [routerLink]="['wishlist']">
+      <a routerLink="/wishlist">
         <fa-icon [icon]="faClipboardList"></fa-icon>
       </a>
     </div>
     <div *ngIf="isUserLogged">
-      <a [routerLink]="['profile']">
+      <a routerLink="/profile">
         <fa-icon [icon]="faUser"></fa-icon>
+      </a>
+    </div>
+    <div *ngIf="isUserLogged">
+      <a routerLink="/admin">
+        <fa-icon [icon]="faKey"></fa-icon>
       </a>
     </div>
     <div *ngIf="isUserLogged" (click)="logoutUser()">

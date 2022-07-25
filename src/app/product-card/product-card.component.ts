@@ -22,7 +22,7 @@ export class ProductCardComponent implements OnInit {
   constructor(private usersService: UsersService) { }
 
   addProductToWishlist(productId: number){
-    const updatedWishlist = [...this.user.wishlist, productId]
+    const updatedWishlist = [...this.user.wishlist || [], productId]
     const updatedUser = { ...this.user, wishlist: updatedWishlist }
 
     this.isOnWishlist = true

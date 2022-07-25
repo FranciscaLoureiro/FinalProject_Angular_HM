@@ -1,10 +1,15 @@
 <div class="container">
-  <div class="item" (mouseover)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <div class="item" (mouseenter)="onMouseEnterTitle()" (mouseleave)="onMouseLeaveTitle()">
     {{ title }}
   </div>
-  <div class="list-wrapper" [ngClass]="{'hidden': !isOpened}">
+  <div 
+    class="list-wrapper" 
+    (mouseenter)="onMouseEnterWindow()" 
+    (mouseleave)="onMouseLeaveWindow()" 
+    [ngClass]="{'hidden': !isOpened}"
+  >
     <ul class="list" *ngFor="let item of dropdownList">
-      <li>
+      <li (click)="navigate(item)">
         {{ item }}
       </li>
     </ul>

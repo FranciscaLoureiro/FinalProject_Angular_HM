@@ -10,12 +10,14 @@ export class ProductsTableComponent implements OnInit {
   products: any[] = []
   productIdToDelete!: any
   isModalOpen: boolean = false
+  filteredProducts: any[] = []
 
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.productsService.getProducts().subscribe(data => {
       this.products = data
+      this.filteredProducts = data
     })
   }
 
@@ -45,6 +47,15 @@ export class ProductsTableComponent implements OnInit {
     }
 
     this.closeModal()
+  }
+
+  onChangeInput(e: any){
+    this.filteredProducts = this.products.filter(product => (
+      product.name.toLowerCase().includes(e.value.toLowerCase()) ||
+      product.brand.toLowerCase().includes(e.value.toLowerCase()) || 
+      product.type.toLowerCase().includes(e.value.toLowerCase()) ||
+      product.color.toLowerCase().includes(e.value.toLowerCase())
+    ))
   }
 
 }
